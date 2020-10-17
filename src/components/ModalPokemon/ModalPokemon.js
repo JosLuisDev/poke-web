@@ -17,14 +17,11 @@ const ModalPokemon = (props) => {
                 <Card>
                     <CardImg top width={'50%'} src={pokemonModal?.sprites?.front_default} alt="pokeSelfie" />
                     <CardBody className={"my-card"}>
-                        <CardColumns className="h6">
-                            <CardTitle>Height</CardTitle>
-                            <CardTitle>Weight</CardTitle>
-                        </CardColumns>
-                        <CardColumns>
-                            <CardText>{pokemonModal.height}</CardText>
-                            <CardText>{pokemonModal.weight}</CardText>
-                        </CardColumns>
+                        <CardTitle>Height</CardTitle>
+                        <CardText>{pokemonModal.height}</CardText>
+                        <hr/>
+                        <CardTitle>Weight</CardTitle>
+                        <CardText>{pokemonModal.weight}</CardText>
                         <hr/>
                         <CardColumns className="h6">
                             <CardTitle>Abilities</CardTitle>

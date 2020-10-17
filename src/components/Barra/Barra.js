@@ -3,7 +3,7 @@ import {Navbar, NavbarBrand} from 'reactstrap';
 
 const Barra = () => {
     return(
-        <Navbar color={"danger"} dark expand="lg" className="sticky-top">
+        <Navbar color={"danger"} dark className="sticky-top navbar-expand-xl">
             <NavbarBrand href={"/"}>Pokemon Website</NavbarBrand>
         </Navbar>
     )

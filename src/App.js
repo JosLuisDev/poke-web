@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import { Button, Container, Table } from 'reactstrap';
+import { Button, Table } from 'reactstrap';
 import './App.css';
 import Barra from './components/Barra/Barra';
 import ModalPokemon from './components/ModalPokemon/ModalPokemon';
@@ -78,15 +78,15 @@ const closeModal = () => {
       {loading ? <h1>Loading...</h1> : (
           <Fragment>
             <Barra/>
-            <br/><br/>
-            <Container className="d-flex flex-row justify-content-center alig-items-center">
+           
+            <div className="d-flex flex-row justify-content-center alig-items-center pt-3 pb-3 bg-dark">
               <Button outline color={"danger"} onClick={prev} className={"mr-3"}>Previous</Button>
               <Button outline color={"danger"} onClick={next}>Next</Button>
-            </Container>
-            <br/><br/>
+            </div>
+            
             <ModalPokemon show={show} pokemonModal={pokemonModal} closeModal={closeModal}/>
-            <Container>
-              <Table striped hover bordered dark size="sm">
+            
+              <Table striped hover bordered dark size="sm" style={{width:"100%"}} className={"m-0"}>
                 <thead>
                   <tr>
                     <th>Pokemon</th>
@@ -101,14 +101,12 @@ const closeModal = () => {
                   })}
                 </tbody>
               </Table>
-              
-            </Container>
-            <br/><br/>
-            <Container className={"d-flex flex-row justify-content-center alig-items-center"}>
+            
+              <div className="d-flex flex-row justify-content-center alig-items-center pt-3 pb-3 bg-dark">
               <Button outline color={"danger"} onClick={prev} className={"mr-3"}>Previous</Button>
               <Button outline color={"danger"} onClick={next}>Next</Button>
-            </Container>
-            <br/><br/>
+            </div>
+
           </Fragment>
       )}
     </div>

@@ -72,20 +72,20 @@ const TablaPokemon = (props) => {
     return(
         <tr>
             <td>
-                <CardImg className={"img-responsive"} src={pokemon.sprites.front_default} alt={''}/>
+                <CardImg className={"img-responsive"} src={pokemon.sprites.front_default} alt={''} style={{height:'100px', width:'100px'}}/>
             </td>
-            <td><h4>{pokemon.name}</h4></td>
+            <td><h4 translate={"no"}>{pokemon.name}</h4></td>
             <td>
                 {pokemon.types.map(type => {
                     return (
-                        <Container className="d-flex flex-column justify-content-center alig-items-center">
+                        <Container className="d-flex flex-column justify-content-center ">
                             <Button style={{backgroundColor: [color(type.type.name)]}} > {type.type.name} </Button>{' '}
                         </Container>
                     )
                 })}
             </td>
             <td>
-                <Button color="danger" onClick={() => openModal(pokemon)}>Pokemon Information</Button>
+                <Button style={{width:"95%"}} color="danger" onClick={() => openModal(pokemon)}>See more</Button>
             </td>
         </tr>
     )
