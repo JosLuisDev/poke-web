@@ -1,0 +1,12 @@
+.my-modal {
+    background-color: rgb(39, 36, 36);
+    color: #fff;
+}
+
+.my-modal-body{
+    background-color: rgb(48, 47, 47);
+}
+
+.my-card{
+    background-color: lightgrey;
+}
